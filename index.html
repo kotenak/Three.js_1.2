@@ -1,4 +1,18 @@
-const renderer = new THREE.WebGLRenderer();
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; }
+		</style>
+	</head>
+	<body>
+		<script type="module">
+			import * as THREE from 'https://cdn.jsdelivr.net/npm/three/build/three.module.js';
+
+			// Наш Javascript будет здесь..
+      const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
@@ -17,3 +31,9 @@ const geometry = new THREE.BufferGeometry().setFromPoints( points );
 const line = new THREE.Line( geometry, material );
 scene.add( line );
 renderer.render( scene, camera );
+
+		</script>
+	</body>
+</html>
+
+
